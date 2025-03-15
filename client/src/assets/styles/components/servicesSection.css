@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+
+.services .services-desc {
+  text-align: left;
+}
+.service-item p {
+  text-align: justify;
+}
+.services .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: all ease-in-out 0.4s;
+  height: 100%;
+}
+.services .service-item hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 3px solid #051f3a;
+}
+
+.services .service-item .icon-image {
+  font-size: 36px;
+  transition: 0.3s;
+  width: 3.5rem; /* Adjust size as needed */
+  height: 3.5rem; /* Adjust size as needed */
+  display: inline-block;
+  vertical-align: middle; /* Aligns the image vertically with the text */
+}
+
+.services .service-item h4 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.services .service-item h4 a {
+  color: var(--heading-color);
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .service-item:hover {
+  transform: translateY(-10px);
+}
+
+.services .service-item:hover h4 a {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+.service-details .services-list {
+  background-color: var(--surface-color);
+  padding: 10px 30px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  margin-bottom: 20px;
+}
+
+.service-details .services-list a {
+  display: block;
+  line-height: 1;
+  padding: 8px 0 8px 15px;
+  border-left: 3px solid
+    color-mix(in srgb, var(--default-color), transparent 70%);
+  margin: 20px 0;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
+.service-details .services-list a.active {
+  color: var(--heading-color);
+  font-weight: 700;
+  border-color: var(--accent-color);
+}
+
+.service-details .services-list a:hover {
+  border-color: var(--accent-color);
+}
+
+.service-details .services-img {
+  margin-bottom: 20px;
+}
+
+.service-details h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.service-details h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service-details p {
+  font-size: 15px;
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.service-details ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.service-details ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}

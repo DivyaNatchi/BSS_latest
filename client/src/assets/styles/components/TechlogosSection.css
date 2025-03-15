@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+# Clients Section
+--------------------------------------------------------------*/
+.clients {
+  padding: 12px 0;
+}
+
+.clients .swiper {
+  padding: 10px 0;
+}
+
+.clients .swiper-wrapper {
+  height: auto;
+}
+
+.clients .swiper-slide img {
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.clients .swiper-slide img:hover {
+  transform: scale(1.1);
+}

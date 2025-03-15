@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+.skills .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.skills .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.skills .content p:last-child {
+  margin-bottom: 0;
+}
+
+.skills .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills .content ul li {
+  padding-bottom: 10px;
+}
+
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: color-mix(in srgb, var(--heading-color), transparent 90%);
+  height: 10px;
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--heading-color);
+}
+
+/* Define specific progress width classes */
+.width-100 {
+  width: 100% !important;
+  background-color: #007bff;
+}
+
+.width-90 {
+  width: 90% !important;
+  background-color: #28a745;
+}
+
+.width-75 {
+  width: 75% !important;
+  background-color: #ffc107;
+}
+
+.width-55 {
+  width: 55% !important;
+  background-color: #dc3545;
+}

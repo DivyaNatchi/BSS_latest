@@ -1,0 +1,117 @@
+/*--------------------------------------------------------------
+# Why Us Section
+--------------------------------------------------------------*/
+.why-us {
+  padding: 30px 0;
+  transition: transform 0.8s ease-out;
+}
+
+.why-us .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.why-us .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+.why-us .whyUsItem-container .whyUsItem-item {
+  background-color: var(--surface-color);
+  position: relative;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Add transition to whyUsItem-item */
+}
+
+.why-us .whyUsItem-container .whyUsItem-item:last-child {
+  margin-bottom: 0;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item h3 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: color 0.3s ease; /* Transition color */
+  cursor: pointer;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item h3 span {
+  color: var(--accent-color);
+  padding-right: 5px;
+  font-weight: 600;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item h3:hover {
+  color: var(--accent-color);
+}
+
+.why-us .whyUsItem-container .whyUsItem-item .whyUsItem-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease; /* Add smooth transitions for visibility and opacity */
+  overflow: hidden;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item .whyUsItem-content p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item .whyUsItem-icon {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  font-size: 22px;
+  line-height: 0;
+  transition: 0.3s;
+  color: var(--accent-color);
+}
+
+.why-us .whyUsItem-container .whyUsItem-item .whyUsItem-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 0;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+
+.why-us .whyUsItem-container .whyUsItem-item .whyUsItem-toggle:hover {
+  color: var(--accent-color);
+}
+
+.why-us .whyUsItem-container .whyUsItem-active h3 {
+  color: var(--accent-color);
+}
+
+.why-us .whyUsItem-container .whyUsItem-active .whyUsItem-content {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  padding-top: 10px;
+}
+
+.why-us .why-us-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-us .why-us-img img {
+  max-height: 70%;
+  transition: transform 0.8s ease-out; /* Add smooth transition for image */
+}
+
+.why-us .why-us-img img[data-aos="zoom-in"] {
+  transform: scale(1); /* Ensure smooth zoom-in effect */
+}

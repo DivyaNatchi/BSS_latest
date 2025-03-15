@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+
+.portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 20px 10px 20px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-family: var(--heading-font);
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio .portfolio-filters li:first-child {
+  margin-left: 0;
+}
+
+.portfolio .portfolio-filters li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 575px) {
+  .portfolio .portfolio-filters li {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+  }
+}
+
+/* Remove the old hover effect */
+.portfolio .portfolio-item {
+  /* Removed position: relative and overflow: hidden */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  position: relative;
+  z-index: 3;
+  background: color-mix(in srgb, var(--background-color), transparent 10%);
+  padding: 15px;
+  display: flex; /* Use flexbox to arrange elements in one line */
+  justify-content: space-between; /* Space between title, description, and link */
+  align-items: center; /* Align vertically */
+  opacity: 1; /* Always visible */
+  transition: none; /* No transition needed */
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0; /* Remove default margin */
+  padding-right: 10px;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  font-size: 28px;
+  color: var(--accent-color); /* Detail link color */
+  margin-left: 10px;
+}
+
+/* Image fix */
+.portfolio-image-wrapper {
+  height: 200px; /* Fixed height */
+  overflow: hidden;
+}
+
+.portfolio-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Remove hover-specific styles */
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/* General card layout */
+.card-layout {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* Adjust card appearance inside Swiper */
+.portfolio .swiper-slide {
+  padding: 10px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.portfolio .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Pagination bullets fix */
+.portfolio .swiper-pagination-bullets {
+  bottom: 15px; /* Adjust if needed */
+  z-index: 10;
+}
+
+.portfolio .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
+.portfolio-model p {
+  text-align: justify;
+}
+.portfolio-model .btn-portfolio_close {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.portfolio-model .btn-portfolio_close:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+/* General container styling */
+.portfolio-container {
+  margin: 0 auto;
+  padding: 0 15px; /* Add some padding */
+}
+
+/* Max width for larger screens */
+@media (min-width: 992px) {
+  .portfolio-container {
+    max-width: 960px;
+  }
+}
+
+/* Full width for smaller screens */
+@media (max-width: 992px) {
+  .portfolio-container {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+}

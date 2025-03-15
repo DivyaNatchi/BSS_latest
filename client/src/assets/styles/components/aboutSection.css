@@ -1,0 +1,16 @@
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .about-us {
+  text-align: left;
+}
+
+.about i,
+.about span {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--accent-color);
+}
+.about .content p {
+  text-align: justify;
+}
