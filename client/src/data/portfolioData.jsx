@@ -1,7 +1,7 @@
-import portfolio1 from "../assets/img/portfolio/unlocking_hidden_potential.png";
-import portfolio2 from "../assets/img/portfolio/TaxResidencyWizard.png";
-import portfolio3 from "../assets/img/portfolio/profit_maximizer_kamal.jpg";
-import portfolio4 from "../assets/img/portfolio/MactechTradingStory.png";
+import portfolio1 from "../assets/img/portfolio/unlocking-hidden-potential.png";
+import portfolio2 from "../assets/img/portfolio/empowering-financial-clarity.png";
+import portfolio3 from "../assets/img/portfolio/franchisee-profit-maximizer.jpg";
+import portfolio4 from "../assets/img/portfolio/mactech-trading-story.png";
 
 /**
  * Portfolio items data

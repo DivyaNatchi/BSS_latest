@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .hero {
-  background-image: url("../../img/byte_cover_latest.png");
+  background-image: url("../../img/hero.png");
   position: relative;
   width: 100%;
   min-height: 80vh;

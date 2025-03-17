@@ -11,7 +11,7 @@ import servicesData from "../data/serviceData";
 export default function ServicesSection() {
   return (
     <section id="services" className="services section">
-      <Container className="section-title" data-aos="fade-up">
+      <Container className="section-title " data-aos="fade-up">
         <h2>Our Services</h2>
         <p className="services-desc">
           Imagine a world where your ideas come to life, where your business

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../assets/styles/components/whyUsSection.css";
-import whyUsImage from "../assets/img/Webpage-02-Regular.png";
+import whyUsImage from "../assets/img/about-us.png";
 
 const whyUsItems = [
   {

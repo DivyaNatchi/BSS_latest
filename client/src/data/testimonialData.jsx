@@ -1,6 +1,6 @@
 // Importing testimonial images
-import anlo from "../assets/img/testimonials/anlo_logo.png";
-import mac from "../assets/img/testimonials/MAC.jpg";
+import anlo from "../assets/img/testimonials/anlo-logo.png";
+import mac from "../assets/img/testimonials/mac-tech-logo.jpg";
 
 /**
  * Testimonials data

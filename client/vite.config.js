@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: "/BSS/", // Set the base URL for your app
+    // base: "/BSS/",
     server: {
       port: 5000, // Change the port to 5000
     },

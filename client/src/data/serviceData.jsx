@@ -1,9 +1,9 @@
-import branding from "../assets/img/services/brand_identiy.png";
+import branding from "../assets/img/services/brand-identiy.png";
 import websites from "../assets/img/services/websites.png";
-import webApp from "../assets/img/services/web_app.png";
-import mobileApp from "../assets/img/services/mobile_app.png";
-import gameApp from "../assets/img/services/game_app.png";
-import dataAnalytics from "../assets/img/services/data_analytics.png";
+import webApp from "../assets/img/services/web-app.png";
+import mobileApp from "../assets/img/services/mobile-app.png";
+import gameApp from "../assets/img/services/game-app.png";
+import dataAnalytics from "../assets/img/services/data-analytics.png";
 import erp from "../assets/img/services/erp.png";
 import IoT from "../assets/img/services/IoT.png";
 

@@ -9,15 +9,15 @@ import "../assets/styles/components/TechlogosSection.css";
 import tech1 from "../assets/img/techLogos/flutter.png";
 import tech2 from "../assets/img/techLogos/react.png";
 import tech3 from "../assets/img/techLogos/nodejs.png";
-import tech4 from "../assets/img/techLogos/zend1.png";
-import tech5 from "../assets/img/techLogos/firebase1.png";
-import tech6 from "../assets/img/techLogos/sqlite1.png";
-import tech7 from "../assets/img/techLogos/mongodb1.png";
-import tech8 from "../assets/img/techLogos/mySQL.png";
-import tech9 from "../assets/img/techLogos/mariadb1.png";
-import tech10 from "../assets/img/techLogos/postgreSQL2.png";
+import tech4 from "../assets/img/techLogos/zend.png";
+import tech5 from "../assets/img/techLogos/firebase.png";
+import tech6 from "../assets/img/techLogos/sqlite.png";
+import tech7 from "../assets/img/techLogos/mongodb.png";
+import tech8 from "../assets/img/techLogos/my-sql.png";
+import tech9 from "../assets/img/techLogos/mariadb.png";
+import tech10 from "../assets/img/techLogos/postgre-sql.png";
 import tech11 from "../assets/img/techLogos/dart.png";
-import tech12 from "../assets/img/techLogos/php1.png";
+import tech12 from "../assets/img/techLogos/php.png";
 
 const techLogos = [
   { src: tech1, alt: "Flutter Logo" },

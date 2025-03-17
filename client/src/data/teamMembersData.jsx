@@ -2,7 +2,7 @@
 import madhu from "../assets/img/team/madhu.jpg";
 import hema from "../assets/img/team/hema.jpg";
 import karthikeyan from "../assets/img/team/karthikeyan.jpg";
-import divya from "../assets/img/team/divya2.jpg";
+import divya from "../assets/img/team/divya.jpg";
 
 /**
  * Team member data

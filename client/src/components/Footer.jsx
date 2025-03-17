@@ -31,6 +31,7 @@ const FooterContact = ({ info }) => (
       {info.address.map((line, index) => (
         <p key={index}>{line}</p>
       ))}
+      <p>Reg. No. SC705685</p>
       <p>
         <strong>Email:</strong> <span>{info.email}</span>
       </p>

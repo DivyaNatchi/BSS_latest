@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, NavbarBrand, Nav, NavItem, Collapse } from "reactstrap";
 import { Link } from "react-scroll";
-import logo from "../assets/img/BSS/BSS_Logo1.png";
+import logo from "../assets/img/logo/logo.png";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 
