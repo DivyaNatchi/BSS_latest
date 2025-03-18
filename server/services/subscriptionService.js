@@ -1,8 +1,6 @@
 const Subscription = require("../models/subscription");
-const {
-  createEmailBody,
-  sendSubscriptionEmailService,
-} = require("./emailService");
+const { sendSubscriptionEmailService } = require("./emailService");
+const { createEmailBody } = require("../models/emailBody");
 
 // Service function to get all subscriped emails
 const getAllSubscriptions = async () => {

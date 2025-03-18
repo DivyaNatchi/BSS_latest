@@ -1,5 +1,6 @@
 const { google } = require("googleapis");
 const config = require("../config/config");
+const { createEmailBody } = require("../models/emailBody");
 
 const oAuth2Client = new google.auth.OAuth2(
   config.clientId,
@@ -13,52 +14,19 @@ oAuth2Client.setCredentials({
 });
 
 /**
- * Creates a base64 encoded email body.
- * @param {string} subject - The subject of the email.
- * @param {string} messageContent - The content of the email message.
- * @returns {string} - The base64 encoded email body.
- */
-const createEmailBody = (subject, messageContent) => {
-  const rawMessage = [
-    `From: "Web Admin" <${process.env.EMAIL_USER}>`,
-    `To: ${process.env.COMPANY_EMAIL}`,
-    `Subject: ${subject} | ${new Date().toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "short",
-      year: "numeric",
-    })}`,
-    "Content-Type: text/plain; charset=utf-8",
-    "",
-    messageContent,
-  ].join("\n");
-
-  return Buffer.from(rawMessage)
-    .toString("base64")
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, ""); // Gmail API expects base64url format
-};
-
-/**
  * Sends an email using the Gmail API.
- * @param {string} subject - The subject of the email.
- * @param {string} messageContent - The content of the email message.
+ * @param {string} rawEmailBody - The base64 encoded email body.
  * @returns {Promise<Object>} - The result data from the Gmail API.
  * @throws {Error} - If the email fails to send.
  */
-const sendEmailService = async (subject, messageContent) => {
+const sendEmail = async (rawEmailBody) => {
   try {
-    // Get the Gmail API instance
     const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
 
-    // Create email body in base64 encoded format
-    const raw = createEmailBody(subject, messageContent);
-
-    // Send the email using gmail.users.messages.send
     const result = await gmail.users.messages.send({
       userId: "me",
       requestBody: {
-        raw: raw,
+        raw: rawEmailBody,
       },
     });
 
@@ -69,32 +37,59 @@ const sendEmailService = async (subject, messageContent) => {
 };
 
 /**
+ * Sends an email using the Gmail API.
+ * @param {string} subject - The subject of the email.
+ * @param {string} messageContent - The content of the email message.
+ * @returns {Promise<Object>} - The result data from the Gmail API.
+ * @throws {Error} - If the email fails to send.
+ */
+const sendEmailService = async (subject, messageContent) => {
+  const raw = createEmailBody(subject, messageContent);
+  return sendEmail(raw);
+};
+
+/**
  * Sends a subscription email using the Gmail API.
  * @param {string} emailBody - The base64 encoded email body.
  * @returns {Promise<Object>} - The result data from the Gmail API.
  * @throws {Error} - If the subscription email fails to send.
  */
 const sendSubscriptionEmailService = async (emailBody) => {
-  try {
-    const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
+  return sendEmail(emailBody);
+};
 
-    const result = await gmail.users.messages.send({
-      userId: "me",
-      requestBody: {
-        raw: emailBody,
-      },
-    });
+/**
+ * Creates the content for the customer inquiry email.
+ * @param {string} name - The name of the customer.
+ * @param {string} email - The email of the customer.
+ * @param {string} subject - The subject of the inquiry.
+ * @param {string} message - The inquiry message.
+ * @returns {string} - The formatted email content.
+ */
+const createMessageContent = (name, email, subject, message) => {
+  return `
+    Dear Team,
 
-    return result.data;
-  } catch (error) {
-    throw new Error(
-      `Failed to send subscription email via Gmail API: ${error.message}`
-    );
-  }
+    We have received a new customer inquiry through our website contact form. Please find the details below:
+
+    Customer's Name: ${name}
+    Customer's Email: ${email}
+    Subject: ${subject}
+    Inquiry: ${message}
+
+    Kindly review the inquiry and get back to the customer as soon as possible.
+
+    Thank you for your prompt attention to this matter.
+
+    Best regards,
+    Team - Web Admin
+    Byte Size IT Solution Limited
+  `;
 };
 
 module.exports = {
   createEmailBody,
   sendEmailService,
   sendSubscriptionEmailService,
+  createMessageContent,
 };
